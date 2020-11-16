@@ -92,14 +92,6 @@ function checkMovement(){
     }
 }
 
-function checkCollision(){
-    if(scene.getMeshByName("box").intersectsMesh(scene.getMeshByName("box2"), true)){
-        isCollisioning = true;
-    } else{
-        isCollisioning = false;
-    }
-}
-
 var goingUp = false;
 var initialPosition = true;
 var zMovement = Math.floor(Math.random() * 10) / 10;
@@ -141,7 +133,7 @@ function ballMovement(){
 engine.runRenderLoop(function () {
     //movementManagerA();
         checkMovement();
-        checkCollision();
+        //checkCollision();
         ballMovement();
         //sphere.position.x += 0.1;
         //camera.position.x += 0
